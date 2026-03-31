@@ -1,3 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #00acdc;
+  --header-height: 60px;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--blue);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: var(--blue);
+  border-radius: 3px;
 }
