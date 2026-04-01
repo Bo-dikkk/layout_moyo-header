@@ -1,6 +1,6 @@
-*,
-*::before,
-*::after {
+.site,
+.site::before,
+.site::after {
   box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@
   --header-height: 60px;
 }
 
-body {
+.site {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -17,7 +17,7 @@ body {
   font-size: 12px;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,16 +29,23 @@ header {
   padding-right: 50px;
   padding-left: 50px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo img {
+.logo {
+  display: inline-flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.logo.img {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: auto;
+  width: auto;
+  max-height: 40px;
 }
 
 .nav__link {
