@@ -41,7 +41,7 @@
   align-items: center;
 }
 
-.logo.logo__image {
+.logo .logo__image {
   display: block;
   height: auto;
   width: auto;
